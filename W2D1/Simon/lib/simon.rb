@@ -10,12 +10,14 @@ class Simon
   end
 
   def play
-    take_turn
+    until @game_over
+      take_turn
+    end
+
     if @game_over
       game_over_message
       reset_game
     end
-      
   end
 
   def take_turn
@@ -38,12 +40,13 @@ class Simon
   end
 
   def round_success_message
-
+    @game_over = true
+    puts "Congratulations! You won :)"
   end
 
   def game_over_message
     @game_over = true
-
+    puts "Game over! You lost :("
   end
 
   def reset_game
