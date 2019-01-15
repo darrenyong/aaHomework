@@ -33,10 +33,12 @@ class Board
     start_idx = start_pos + 1
     last_idx = start_pos + num_stones
     (start_idx..last_idx).each do |idx|
-      @cups[idx].push(@cups[start_pos].pop)
+      if idx != 6 || idx!= 13
+        @cups[idx].push(@cups[start_pos].pop)
+      end
     end
 
-    self.render
+    # self.render
   end
 
   def next_turn(ending_cup_idx)
@@ -52,6 +54,10 @@ class Board
   end
 
   def one_side_empty?
+    bottom_side = @cups[0..5]
+    top_side = @cups[7..12]
+
+    bottom_side.all? {|ele| ele == []} || top_side.all? {|ele| ele == []} 
   end
 
   def winner
