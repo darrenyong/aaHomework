@@ -61,5 +61,14 @@ class Board
   end
 
   def winner
+    val = @cups[6].length <=> @cups[13].length
+    case val
+    when 0
+      return :draw
+    when 1
+      return @name1
+    when -1
+      return @name2
+    end
   end
 end
