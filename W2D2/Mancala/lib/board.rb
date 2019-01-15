@@ -3,12 +3,14 @@ class Board
 
   def initialize(name1, name2)
     @cups = Array.new(14)
+    @name1 = name1
+    @name2 = name2
     self.place_stones
   end
 
   def place_stones
-    stones = [:stone, :stone, :stone, :stone]
     @cups.each_with_index do |ele, idx|
+      stones = [:stone, :stone, :stone, :stone]
       if idx == 13 || idx == 6
         @cups[idx] = []
       else
@@ -27,6 +29,14 @@ class Board
   end
 
   def make_move(start_pos, current_player_name)
+    num_stones = @cups[start_pos].length
+    start_idx = start_pos + 1
+    last_idx = start_pos + num_stones
+    (start_idx..last_idx).each do |idx|
+      @cups[idx].push(@cups[start_pos].pop)
+    end
+
+    self.render
   end
 
   def next_turn(ending_cup_idx)
