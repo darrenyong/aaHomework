@@ -55,3 +55,17 @@ end
 
 sorted_oct_arr = dominant_octopus(fishes)
 sorted_oct_arr.last
+
+
+# Clever Octopus - O(n)
+# clever_octopus(fishes)
+def clever_octopus(arr)
+  longest_fish = ""
+  arr.each do |ele|
+    if ele.length > longest_fish.length
+      longest_fish = ele
+    end
+  end
+
+  return longest_fish
+end
