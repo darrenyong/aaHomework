@@ -69,3 +69,14 @@ def clever_octopus(arr)
 
   return longest_fish
 end
+
+
+# Dancing Octopus
+tiles_array = ["up", "right-up", "right", "right-down", "down", "left-down", "left", "left-up" ]
+
+# Slow Dance - O(n)
+def slow_dance(tile, tile_arr)
+  tile_arr.each_index do |idx|
+    return idx if tile_arr[idx] == title
+  end
+end
