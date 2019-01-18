@@ -9,17 +9,21 @@
     end
 
     def add(el)
-      # adds element to cache according to LRU principle
+      # adds element to cache according to LRU principles
+      
     end
 
     def show
       # shows the items in the cache, with the LRU item first
-      @cache
+      count = 0
+      @cache.each {|ele| count += 1 unless ele.nil?}
+      count
     end
 
     private
     # helper methods go here!
-
+    def full?
+      @cache.any?(&:nil?)
   end
 end
 
