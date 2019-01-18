@@ -1,29 +1,25 @@
- class LRUCache
-    def initialize(size)
-      @cache = Array.new(size)
-    end
+class LRUCache
+  def initialize(size)
+    @cache = Array.new(size)
+  end
 
-    def count
-      # returns number of elements currently in cache
-      @cache.length
-    end
+  def count
+    # returns number of elements currently in cache
+    @cache.length
+  end
 
-    def add(el)
-      # adds element to cache according to LRU principles
-      
-    end
+  def add(el)
+    # adds element to cache according to LRU principles
+  end
 
-    def show
-      # shows the items in the cache, with the LRU item first
-      count = 0
-      @cache.each {|ele| count += 1 unless ele.nil?}
-      count
-    end
+  def show
+    # shows the items in the cache, with the LRU item first
+    @cache
+  end
 
-    private
-    # helper methods go here!
-    def full?
-      @cache.any?(&:nil?)
+  # helper methods go here!
+  def full?
+    @cache.any? { |ele| ele == nil| }
   end
 end
 
