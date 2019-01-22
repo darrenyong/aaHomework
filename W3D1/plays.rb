@@ -95,4 +95,16 @@ class PlayWright
         id = ?
     SQL
   end
+
+  def get_plays
+    raise "#{self} not in database" unless self.id
+    PlayDBConnection.instance.execute(<<-SQL, self.id)
+      SELECT
+        *
+      FROM
+        plays
+      WHERE
+        playwright_id = ?
+    SQL
+  end
 end
