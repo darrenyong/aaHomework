@@ -4,7 +4,7 @@ class CreatePeopleTable < ActiveRecord::Migration[5.2]
       t.string :name, null: false
       t.integer :house_id, null: false
 
-      t.timestamps
+      t.timestamps 
     end
   end
 end
