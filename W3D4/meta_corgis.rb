@@ -107,6 +107,7 @@ class MetaCorgiSnacks
   def initialize(snack_box, box_id)
     @snack_box = snack_box
     @box_id = box_id
+    
   end
 
   def method_missing(name, *args)
