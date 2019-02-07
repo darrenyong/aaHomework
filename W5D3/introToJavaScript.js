@@ -4,5 +4,10 @@ function madLib(verb, adjective, noun) {
   var capAdjective = adjective.toUpperCase()
   var capNoun = noun.toUpperCase()
 
-  console.log(`we shall ${capVerb} the ${capAdjective} ${capNoun}`)
+  console.log(`we shall ${capVerb} the ${capAdjective} ${capNoun}`);
+}
+
+// isSubstring
+function isSubstring(searchString, subString) {
+  console.log(searchString.includes(subString));
 }
