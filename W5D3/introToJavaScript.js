@@ -6,5 +6,3 @@ function madLib(verb, adjective, noun) {
 
   console.log(`we shall ${capVerb} the ${capAdjective} ${capNoun}`)
 }
-
-// isSubstring
