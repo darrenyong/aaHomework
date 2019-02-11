@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
   canvasElement.width = 500px;
   canvasElement.height = 500px;
 
+  const ctx = canvasElement.getContext("2d");
 
 
 });
