@@ -64,7 +64,7 @@ class Widget extends React.Component {
           Location:
           {cityOptions}
         </div>
-        
+
         <h3>{jobListings.length} Job Listings</h3>
         <ol className="listings-list">
             {jobListings}
